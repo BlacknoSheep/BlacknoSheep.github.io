@@ -1,7 +1,7 @@
 const str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=,./<>?;':\"[]{}\\|`~";
 const fontSize = 10;
 // 绘制代码雨
-function rain(canvas, finishFn) {
+function rain(canvas, onFinish) {
     const ctx = canvas.getContext("2d");
     canvas.width = screen.availWidth;
     canvas.height = screen.availHeight;
@@ -29,7 +29,7 @@ function rain(canvas, finishFn) {
                 ys[index] += 10;
             });
         }
-        else if (restColor > 30) {
+        else if (restColor > 25) {
             restColor *= 1 - opacity;
         }
         else {
@@ -45,7 +45,7 @@ function rain(canvas, finishFn) {
             // 删除画布
             canvas.remove();
             // 执行回调
-            finishFn();
+            onFinish();
         }
     }, 40);
 }
