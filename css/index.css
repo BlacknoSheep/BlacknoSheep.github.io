@@ -8,7 +8,8 @@ body {
   height: 100%;
   /* display: none; */
   opacity: 0;
-  transition: all 2s ease-in-out;
+  /* 可能会导致刚进入页面时发生淡出 */
+  /* transition: all 2s ease-in-out; */
 }
 
 #footer {
