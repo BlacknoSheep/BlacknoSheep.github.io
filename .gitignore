@@ -1,3 +1,3 @@
 .vscode
-*.ts
-tsconfig.json
+# *.ts
+# tsconfig.json
